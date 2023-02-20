@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'asap_condensedregular';
+    src: url('../../public/fonts/Asap_Condensed/asapcondensed-regular-webfont.woff2') format('woff2'),
+         url('../../public/fonts/Asap_Condensed/asapcondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('../../public/fonts/Quicksand/quicksand-bold-webfont.woff2') format('woff2'),
+         url('../../public/fonts/Quicksand/quicksand-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

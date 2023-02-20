@@ -1,0 +1,165 @@
+//Greyscale
+$g-light: #F8F9FA;
+$g-l1: #E9ECEF;
+$g-l2: #DEE2E6;
+$g-l3: #CED4DA;
+$g-mid: #ADB5BD;
+$g-d3: #6C757D;
+$g-d2: #495057;
+$g-d1: #343A40;
+$g-dark: #212529;
+
+//colors
+$c-light: #E4CA5D;
+$c-l1: #D8AE25;
+$c-mid: #CF901B;
+$c-d1: #BC2D15;
+$c-dark: #991903;
+
+//From: https://www.redraggedfiend.com/introduction-hex-mapping/#mobile-header-left-nav
+$dark: #2D392B;
+$red: #72312F;
+$mid: #D4C083;
+$light: #FCF8F8;
+
+//fonts
+$body-font: 'asap_condensedregular', sans-serif;
+$title-font: 'quicksandbold', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: $light;
+}
+
+header {
+    padding: 2em;
+    color: $g-dark;
+    font-size: 1em;
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dice {
+        font-size: 3em;
+        background-color: $red;
+        color: $light;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    h1 {
+        font-family: $title-font;
+        background-color: $g-l2;
+        color: $g-dark;
+        border-radius: 1em;
+        padding: 10px 30px;
+    }
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+h2 {
+    font-family: $title-font;
+    text-transform: capitalize;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}
+
+.result {
+    width: 60%;
+    height: 100%;
+    border-radius: 2em;
+    background-color: $red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $light;
+
+    h2 {
+        font-family: $title-font;
+        font-size: 3.5em;
+        text-transform: capitalize;
+    }
+}
+
+.select {
+    background-color: $g-l2;
+    width: 100%;
+    height: 80%;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    padding: 1em 1.5em 0.5em 1.5em;
+    gap: 12px;
+    font-family: $title-font;
+
+    .container {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .dice,
+    .amount {
+        background-color: $light;
+        height: 100%;
+        width: 9em;
+        border-radius: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        h3 {
+            margin: 0.5em 0.7em;
+            align-self: flex-start;
+        }
+    }
+
+    .start {
+        background-color: $light;
+        padding: 1em;
+        text-align: center;
+        border-radius: 2em;
+        width: 290px;
+        align-self: center;
+
+        h2 {
+            font-size: 1.1em;
+        }
+    }
+
+
+
+      
+
+}
+
+
+
+@media screen and (min-width:991px) {
+
+}
