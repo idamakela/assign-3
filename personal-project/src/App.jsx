@@ -18,7 +18,10 @@ function App() {
                 <div className="container">
                     <div className="text-container">
                         <h1>D20 dice roller</h1>
-                        <p>some text about it</p>
+                        <p>
+                            Press the button bellow to roll a D20 dice!
+                            This is the start of a bigger application, more functions can come out in the future. 
+                        </p>
                     </div>
                     <button className='btn'>roll</button>
                 </div>
