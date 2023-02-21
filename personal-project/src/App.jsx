@@ -1,32 +1,26 @@
 import React, { useState } from 'react';
 import { FaDiceD20 } from 'react-icons/fa';
 
-function generateRandomNumber(max, min) {
-    return Math.floor(Math.random() * (max - min) + min);
-}
-
-const diceRoll = () => {
-    return generateRandomNumber(20, 1);
-}
-
-const diceRollResult = (number) => {
-    
-
-    return (
-        <h2 className='number'>{number}</h2>
-    )
-}
 
 function App() {
+    const [randomNumber, setRandomNumber] = useState(null);
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = (min, max) => {
+        const randomNumber = Math.floor(Math.random() * (max - min) + min);
+        setRandomNumber(randomNumber);
+        setIsClicked(true);
+    }
 
     //If screen in mobile return below, else return "to big screen"
     return (
         <>
             <main>
                 <div className="result">
-                    {
-
-                        <FaDiceD20 className='dice' />
+                    {randomNumber == null ? 
+                        (<FaDiceD20 className={`dice ${isClicked ? 'flip-2-hor-top-1' : ''}`}/>) 
+                        : 
+                        (<div className={`number ${isClicked ? 'flip-2-hor-top-1' : ''}`}>{randomNumber}</div>)
                     }
                 </div>
                 <div className="container">
@@ -37,7 +31,7 @@ function App() {
                             This is the start of a bigger application, more functions can come out in the future. 
                         </p>
                     </div>
-                    <button className='btn' onClick={diceRoll}>roll</button>
+                    <button className='btn' onClick={() => handleClick(20,1)}>roll</button>
                 </div>
             </main>
         </>

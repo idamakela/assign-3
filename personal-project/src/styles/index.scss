@@ -51,15 +51,25 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 10em;
+    min-height: 10em;
     
     .dice,
     .number {
         font-size: 15em;
         color: $mid;
         font-family: $body-font;
+        transition: all 1s ease-in-out;
     }
 
+    .dice.change,
+    .number.change {
+        transform: rotateY(180deg);
+    }
+}
 
+.flip-2-hor-top-1 {
+	-webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 
