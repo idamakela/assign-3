@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { FaDiceD20 } from 'react-icons/fa';
 
-function dice(dice, amount) {
-    
+function generateRandomNumber(max, min) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
+const diceRoll = () => {
+    return generateRandomNumber(20, 1);
+}
+
+const diceRollResult = (number) => {
+    
+
+    return (
+        <h2 className='number'>{number}</h2>
+    )
+}
 
 function App() {
 
@@ -13,7 +24,10 @@ function App() {
         <>
             <main>
                 <div className="result">
-                    <FaDiceD20 className='dice' />
+                    {
+
+                        <FaDiceD20 className='dice' />
+                    }
                 </div>
                 <div className="container">
                     <div className="text-container">
@@ -23,7 +37,7 @@ function App() {
                             This is the start of a bigger application, more functions can come out in the future. 
                         </p>
                     </div>
-                    <button className='btn'>roll</button>
+                    <button className='btn' onClick={diceRoll}>roll</button>
                 </div>
             </main>
         </>

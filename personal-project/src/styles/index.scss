@@ -48,13 +48,18 @@ main {
 
 .result {
     @include flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
     
-    .dice {
+    .dice,
+    .number {
         font-size: 15em;
         color: $mid;
-        align-self: center;
-        margin-top: 0.5em;
+        font-family: $body-font;
     }
+
+
 }
 
 
