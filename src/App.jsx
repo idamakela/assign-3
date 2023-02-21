@@ -31,7 +31,6 @@ function App() {
                     <button className='btn' onClick={() => handleClick(20,1)}>roll</button>
                 </div>
             </main>
-            {/* copyright Ida Mäkelä */}
         </>
     )
 }
