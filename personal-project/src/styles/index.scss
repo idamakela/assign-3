@@ -1,21 +1,3 @@
-//Greyscale
-$g-light: #F8F9FA;
-$g-l1: #E9ECEF;
-$g-l2: #DEE2E6;
-$g-l3: #CED4DA;
-$g-mid: #ADB5BD;
-$g-d3: #6C757D;
-$g-d2: #495057;
-$g-d1: #343A40;
-$g-dark: #212529;
-
-//colors
-$c-light: #E4CA5D;
-$c-l1: #D8AE25;
-$c-mid: #CF901B;
-$c-d1: #BC2D15;
-$c-dark: #991903;
-
 //From: https://www.redraggedfiend.com/introduction-hex-mapping/#mobile-header-left-nav
 $dark: #2D392B;
 $red: #72312F;
@@ -26,10 +8,16 @@ $light: #FCF8F8;
 $body-font: 'asap_condensedregular', sans-serif;
 $title-font: 'quicksandbold', sans-serif;
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 10px;
 }
 
 html {
@@ -38,149 +26,71 @@ html {
 
 body {
     height: 100%;
-    background-color: $light;
-}
-
-header {
-    padding: 1.5em;
-    color: $g-dark;
-    font-size: 1em;
-
-    .container {
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .dice-icon {
-        font-size: 3em;
-        background-color: $red;
-        color: $light;
-        padding: 10px;
-        border-radius: 50%;
-    }
-
-    h1 {
-        font-family: $title-font;
-        background-color: $g-l2;
-        color: $g-dark;
-        border-radius: 1em;
-        padding: 10px 30px;
-    }
+    background-color: $red;
 }
 
 main {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-h2 {
-    font-family: $title-font;
-    text-transform: capitalize;
-}
-
-.container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100%;
+    @include flex-column;
+    justify-content: space-between;
 }
 
 .result {
-    width: 60%;
-    height: 100%;
-    border-radius: 2em;
-    background-color: $red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: $light;
-
-    h2 {
-        font-family: $title-font;
-        font-size: 3.5em;
-        text-transform: capitalize;
-    }
-}
-
-.select {
-    background-color: $g-l1;
-    width: 100%;
-    height: 85%;
-    border-radius: 2em 2em 0 0;
-    display: flex;
-    flex-direction: column;
-    flex-direction: column;
-    text-transform: capitalize;
-    padding: 1em 1.5em 0.5em 1.5em;
-    gap: 12px;
-    font-family: $body-font;
-
-    .container {
-        gap: 15px;
-        align-items: center;
-    }
-
-    .dice,
-    .amount {
-        background-color: $light;
-        height: 100%;
-        width: 100%;
-        border-radius: 2em;
-        display: flex;
-        align-items: center;
-    }
-
-    h3 {
-        font-size: 0.9em;
-        font-weight: 400;
-        align-self: flex-start;
-        padding: 9px;
-    }
-
-    .select-title,
-    .amount-title {
-        display: flex;
-        background-color: $g-l1;
-        border-radius: 20px;
-        align-self: flex-start;
-        margin: 15px;
-
-        .dice-icon,
-        .plus-icon {
-            font-size: 2.3em;
-            background-color: $red;
-            color: $light;
-            padding: 8px;
-            border-radius: 50%;
-        }
-    }
-
-    .start {
-        background-color: $light;
-        padding: 1em;
-        text-align: center;
-        border-radius: 2em;
-        width: 100%;
+    @include flex-column;
+    
+    .dice {
+        font-size: 15em;
+        color: $mid;
         align-self: center;
-
-        h2 {
-            font-size: 1.1em;
-        }
-
+        margin-top: 0.5em;
     }
-
-    .start:hover {
-        background-color: $mid;
-    }
-
-
-
-      
-
 }
+
+
+.container {
+    height: 45vh;
+    background-color: $light;
+    @include flex-column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 40px 0;
+
+    .btn {
+        font-family: $body-font;
+        font-size: 1.8rem;
+        border: none;
+        padding: 1em 7em;
+        border-radius: 5em;
+        text-transform: capitalize;
+        background-color: $mid;
+    
+        &:hover {
+            background-color: $dark;
+            color: $light;
+        }
+    }
+
+    .text-container {
+        @include flex-column;
+        align-items: center;
+    
+        h1  {
+            font-family: $title-font;
+            font-size: 2.8rem;
+            text-transform: capitalize;
+            color: $dark;
+        }
+    
+        p {
+            font-family: $body-font;
+            font-size: 1.6rem;
+            margin-top: 10px;
+        }
+    }
+}
+
 
 
 
