@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { FaDiceD20 } from 'react-icons/fa';
+import { FaDiceD20, FaPlusCircle } from 'react-icons/fa';
+import Selector from 'amount-selector.jsx';
 
-function dice() {
+function dice(dice, amount) {
 
 }
+
 
 function App() {
 
@@ -11,7 +13,7 @@ function App() {
         <>
             <header>
                 <div className="container">
-                    <FaDiceD20 className='dice' />
+                    <FaDiceD20 className='dice-icon' />
                     <h1>D20</h1>
                 </div>
             </header>
@@ -26,11 +28,31 @@ function App() {
                 <div className='container two'>
                     <div className="select">
                         <h2>Select</h2>
+
                         <div className="container">
-                            <div className="dice"><h3>dice</h3></div>
-                            <div className="amount"><h3>amount</h3></div>
+                            <div className="dice">
+                                <div className="select-title">
+                                    <FaDiceD20 className='dice-icon' />
+                                    <h3>dice</h3>
+                                </div>
+
+                                <div className="select-dice">
+
+                                </div>
+                            </div>
+
+                            <div className="amount">
+                                <div className="amount-title">
+                                    <FaPlusCircle className='plus-icon' />
+                                    <h3>amount</h3>
+                                </div>
+
+                                <div className="select-amount">
+                                    <Selector />
+                                </div>
+                            </div>
                         </div>
-                        <div className="start"><h2>start</h2></div>
+                        <div className="start"><h2>roll</h2></div>
                     </div>
                 </div>
             </main>
