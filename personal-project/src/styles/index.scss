@@ -1,19 +1,9 @@
-//From: https://www.redraggedfiend.com/introduction-hex-mapping/#mobile-header-left-nav
-$dark: #2D392B;
+//color
+$dark: #212529;
+$grey: #6C757D; 
 $red: #72312F;
 $mid: #D4C083;
-$light: #FCF8F8;
-
-//Greyscale
-$g-light: #F8F9FA;
-$g-l1: #E9ECEF;
-$g-l2: #DEE2E6;
-$g-l3: #CED4DA;
-$g-mid: #ADB5BD;
-$g-d3: #6C757D;
-$g-d2: #495057;
-$g-d1: #343A40;
-$g-dark: #212529;
+$light: #ffffff;
 
 //fonts
 $body-font: 'asap_condensedregular', sans-serif;
@@ -26,9 +16,9 @@ $title-font: 'quicksandbold', sans-serif;
 
 * {
     box-sizing: border-box;
+    font-size: 10px;
     margin: 0;
     padding: 0;
-    font-size: 10px;
 }
 
 html {
@@ -36,62 +26,51 @@ html {
 }
 
 body {
-    height: 100%;
     background-color: $red;
+    height: 100%;
 }
 
 main {
-    height: 100vh;
     @include flex-column;
+    height: 100vh;
     justify-content: space-between;
 }
 
 .result {
     @include flex-column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-top: 10em;
     min-height: 10em;
     
     .dice,
     .number {
-        font-size: 15em;
         color: $mid;
         font-family: $body-font;
-        transition: all 1s ease-in-out;
-    }
-
-    .dice.change,
-    .number.change {
-        transform: rotateY(180deg);
+        font-size: 15em;
     }
 }
-
-.flip-2-hor-top-1 {
-	-webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-
 
 .container {
-    height: 45vh;
-    background-color: $light;
     @include flex-column;
     align-items: center;
+    background-color: $light;
+    border-radius: 15px;
+    height: 45vh;
     justify-content: space-between;
     margin: 10px;
-    border-radius: 15px;
+    max-width: 500px;
     padding: 40px 0;
 
     .btn {
+        background-color: $red;
+        border-radius: 5em;
+        border: none;
+        color: $light;
         font-family: $body-font;
         font-size: 1.8rem;
-        border: none;
         padding: 1em 7em;
-        border-radius: 5em;
         text-transform: capitalize;
-        background-color: $red;
-        color: $light;
     
         &:hover {
             background-color: $mid;
@@ -104,26 +83,26 @@ main {
         align-items: center;
     
         h1  {
+            color: $dark;
             font-family: $title-font;
             font-size: 2.6rem;
             text-transform: capitalize;
-            color: $g-dark;
         }
     
         p {
+            color: $grey;
             font-family: $body-font;
             font-size: 1.6rem;
             margin-top: 15px;
-            color: $g-d3;
             max-width: 20em;
             text-align: center;
         }
     }
 }
 
-
-
-
-@media screen and (min-width:991px) {
-
+@media screen and (min-width: 500px) {
+    .container {
+        align-self: center;
+        min-width: 500px;
+    }
 }

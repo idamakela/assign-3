@@ -4,23 +4,20 @@ import { FaDiceD20 } from 'react-icons/fa';
 
 function App() {
     const [randomNumber, setRandomNumber] = useState(null);
-    const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = (min, max) => {
         const randomNumber = Math.floor(Math.random() * (max - min) + min);
         setRandomNumber(randomNumber);
-        setIsClicked(true);
     }
 
-    //If screen in mobile return below, else return "to big screen"
     return (
         <>
             <main>
                 <div className="result">
                     {randomNumber == null ? 
-                        (<FaDiceD20 className={`dice ${isClicked ? 'flip-2-hor-top-1' : ''}`}/>) 
+                        <FaDiceD20 className='dice'/>
                         : 
-                        (<div className={`number ${isClicked ? 'flip-2-hor-top-1' : ''}`}>{randomNumber}</div>)
+                        <div className='number'>{randomNumber}</div>
                     }
                 </div>
                 <div className="container">
@@ -34,6 +31,7 @@ function App() {
                     <button className='btn' onClick={() => handleClick(20,1)}>roll</button>
                 </div>
             </main>
+            {/* copyright Ida Mäkelä */}
         </>
     )
 }
