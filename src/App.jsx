@@ -28,7 +28,10 @@ function App() {
                             This is the start of a bigger application, more functions can come out in the future. 
                         </p>
                     </div>
-                    <button className='btn' onClick={() => handleClick(20,1)}>roll</button>
+                    <div className="btn-container">
+                        <button className='btn' onClick={() => handleClick(20,1)}>roll</button>
+                        <a href="https://dribbble.com/shots/17423785-Weather-Interface" target={'_blank'}>Link to Design Inspo</a>
+                    </div>
                 </div>
             </main>
         </>
